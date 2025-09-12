@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitor Ferreira - Currículo Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variáveis de cores */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --background: #f9f9f9;
+        }
+        
+        /* Estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 5px solid var(--accent);
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 20px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-img i {
+            font-size: 70px;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Seções */
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        section h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Experiências */
+        .experience {
+            margin-bottom: 20px;
+        }
+        
+        .experience:last-child {
+            margin-bottom: 0;
+        }
+        
+        .experience h3 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Cursos */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .course {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark);
+            color: white;
+            margin-top: 40px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animações */
+        section {
+            transition: transform 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Links */
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-img">
+            <i class="fas fa-user"></i>
+        </div>
+        <h1>Vitor Ferreira de Lima</h1>
+        <h2>Profissional em Transição de Carreira para Tecnologia</h2>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Condomínio Vivendas Bela Vista, Módulo T, Casa 9, Grande Colorado (Sobradinho), Brasília/DF - 73105-909</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>(61) 2192-9688 | (61) 99918-0505</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>vitor.ferreira@exemplo.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/vitor-ferreira-400615198" target="_blank">linkedin.com/in/vitor-ferreira-400615198</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/vitorf1" target="_blank">github.com/vitorf1</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="personal-data">
+            <h2><i class="fas fa-user"></i> Dados Pessoais</h2>
+            <p><strong>Data de Nascimento:</strong> 15/11/1991</p>
+            <p><strong>Sexo:</strong> Masculino</p>
+            <p><strong>Estado Civil:</strong> Solteiro</p>
+            <p><strong>CPF:</strong> 037.001.281-00</p>
+            <p><strong>RG:</strong> 2472257 SSP/DF</p>
+        </section>
+        
+        <section id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+            <div class="experience">
+                <h3>Educação Física - Licenciatura</h3>
+                <span class="date">Conclusão: 2013</span>
+                <p>Universidade Paulista - UNIP</p>
+            </div>
+            <div class="experience">
+                <h3>Educação Física - Bacharel</h3>
+                <span class="date">Conclusão: 2024</span>
+                <p>Universidade UNIBF</p>
+            </div>
+            <div class="experience">
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <span class="date">Cursando o 1º semestre - 2025</span>
+                <p>Faculdade CEUB</p>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <h2><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+            <div class="experience">
+                <h3>Fiscal de Unidade</h3>
+                <span class="date">05/07/2021 até 23/02/2022</span>
+                <p>BRA SERVIÇOS ADMINISTRATIVOS LTDA</p>
+                <ul>
+                    <li>Fiscalizar serviços prestados pelos colaboradores</li>
+                    <li>Responsável pelas folhas de pontos</li>
+                    <li>Distribuição de materiais</li>
+                    <li>Funções administrativas dentro de Unidades Básicas de Saúde e Hospital Regional do Paranoá</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3>Chefe Administrativo de Unidade de Apoio do Conselho Tutelar da Fercal</h3>
+                <span class="date">04/2016 a 01/2019</span>
+                <p>CONSELHO TUTELAR DA FERCAL</p>
+                <ul>
+                    <li>Utilização do sistema SEI</li>
+                    <li>Gerenciar a atuação dos servidores administrativos e estagiários</li>
+                    <li>Executor do contrato de limpeza e conservação</li>
+                    <li>Executor do contrato de aluguel</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3>Estagiário</h3>
+                <span class="date">10/2011 a 08/2013</span>
+                <p>MINISTÉRIO DO ESPORTE</p>
+                <ul>
+                    <li>Imputação de dados no sistema utilizado pelo órgão</li>
+                    <li>Arquivamento e montagem de processos internos</li>
+                    <li>Despacho de processos e tramitação interna</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3>Gerente de compras</h3>
+                <span class="date">03/2012 a 10/2013</span>
+                <p>REPUBLIKA PRODUÇÕES E EVENTOS</p>
+                <ul>
+                    <li>Controle de estoque</li>
+                    <li>Negociação com fornecedores</li>
+                    <li>Contratação da equipe de vendas</li>
+                    <li>Treinamento da equipe de vendas, focando no aumento de vendas do bar e fechamento dos caixas dos eventos</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3>Vendedor</h3>
+                <span class="date">09/2011 a 12/2011</span>
+                <p>NOBLESSE TURISMO</p>
+                <ul>
+                    <li>Captação de novos clientes</li>
+                    <li>Vendas de produtos/pacotes</li>
+                    <li>Atendimento aos clientes</li>
+                    <li>Agenciar viagens expondo planos e emissão de bilhetes</li>
+                    <li>Gestão financeira e fechamento de caixa</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2><i class="fas fa-laptop-code"></i> Conhecimentos em Informática</h2>
+            <ul>
+                <li>Excel básico</li>
+                <li>Word básico</li>
+                <li>Internet básico</li>
+            </ul>
+        </section>
+        
+        <section id="languages">
+            <h2><i class="fas fa-language"></i> Idiomas</h2>
+            <p>Inglês – Leitura (básico iniciante) / Escrita (básico iniciante)</p>
+        </section>
+        
+        <section id="courses">
+            <h2><i class="fas fa-certificate"></i> Cursos e Capacitações</h2>
+            <div class="course-grid">
+                <div class="course">
+                    <h3>Começando em programação - carreira e primeiros passos</h3>
+                    <p>Alura - 1h</p>
+                    <span class="date">11/2024</span>
+                </div>
+                
+                <div class="course">
+                    <h3>Lógica e programação - praticando com desafios</h3>
+                    <p>Alura - 8h</p>
+                    <span class="date">08/2025</span>
+                </div>
+                
+                <div class="course">
+                    <h3>Lógica de programação - explore funções e listas</h3>
+                    <p>Alura - 6h</p>
+                    <span class="date">02/2025</span>
+                </div>
+                
+                <div class="course">
+                    <h3>Lógica de programação - mergulhe em programação com JavaScript</h3>
+                    <p>Alura - 6h</p>
+                    <span class="date">07/2025</span>
+                </div>
+                
+                <div class="course">
+                    <h3>HTML e CSS – praticando HTML/CSS</h3>
+                    <p>Alura - 8h</p>
+                    <span class="date">02/2025</span>
+                </div>
+                
+                <div class="course">
+                    <h3>HTML E CSS – ambiente de desenvolvimento, estruturas de arquivos e tags</h3>
+                    <p>Alura - 8h</p>
+                    <span class="date">07/2025</span>
+                </div>
+                
+                <div class="course">
+                    <h3>Empreendedorismo</h3>
+                    <p>SEBRAE - 90h</p>
+                    <span class="date">04/2007</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Vitor Ferreira de Lima - 2025</p>
+        <p>Currículo Online</p>
+    </footer>
+</body>
+</html>
